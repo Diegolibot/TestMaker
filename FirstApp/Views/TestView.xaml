@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="FirstApp.Views.TestView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FirstApp.Views"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White" FontFamily="Microsoft YaHei">
+    <ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="auto"/>
+
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20"/>
+
+
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+
+            <!--Question Column-->
+
+            <!--Row 1-->
+            <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" TextWrapping="Wrap" FontSize="40" TextAlignment="Center" Text="{Binding Path=CurrentQuestionText, Mode=OneWay}"/>
+
+            <!--Row 2-->
+            <Image Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Source="{Binding Path=CurrentImage, Mode=OneWay}"></Image>
+
+            <!--Row 4-->
+            <ItemsControl ItemsSource="{Binding Path=Answers, Mode=OneWay}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding AnswerText}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <!--Row 5-->
+
+            <Button x:Name="Previous" Grid.Row="7" Grid.Column="1" Margin="0,5" Width="100" Content="Previous"/>
+            <Button x:Name="Next" Grid.Row="7" Grid.Column="3" Margin="0,5" Width="100" Content="Next"/>
+            <ComboBox x:Name="Options" Grid.Row="7" Grid.Column="2" Margin="0,5" MaxWidth="500" MaxHeight="25" 
+                      SelectedItem ="{Binding Path=Chosen, Mode=TwoWay}">
+            </ComboBox>
+            
+
+            <!--Menu Column-->
+            <TextBlock Grid.Row="1" Grid.Column="6" Text="{Binding Path=Time ,Mode=OneWay}" TextAlignment="Center" Padding="0,10"  FontSize="25"></TextBlock>
+            <ScrollViewer Grid.Row="3" Grid.Column="6" Grid.RowSpan="7" MaxHeight="200">
+
+                <ItemsControl x:Name="Questions" >
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="3" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical">
+                                <Button Content="{Binding Number}" Tag="{Binding Number}"
+                                        cal:Message.Attach="[Event Click] = [Action ItemClick($this.Tag)]"
+                                        Background="White" BorderBrush="White"
+                                        MinWidth="20" MinHeight="20"></Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+            </ScrollViewer>
+
+            <Button x:Name="Finished" Grid.Row="10" Grid.Column="5" Width="80" Content="Finish Test"></Button>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

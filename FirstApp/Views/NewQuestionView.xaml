@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="FirstApp.Views.NewQuestionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FirstApp.Views"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White"  FontFamily="Microsoft YaHei">
+    <ScrollViewer>
+    <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="auto" />
+            <RowDefinition MaxHeight="100" MinHeight="30" Height="*"/>
+
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            
+            <RowDefinition Height="auto"/>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <!--Row 1-->
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" FontSize="40" TextAlignment="Center" Text="New Question"/>
+
+        <!--Question Column-->
+
+        <!--Row 3-->
+        <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Center" FontSize="17" Text="Question"/>
+        
+        <!--Row 4-->
+        <TextBox Grid.Row="4" Grid.Column="1"  MaxWidth="500" TextAlignment ="Justify" TextWrapping="Wrap" x:Name="QuestionText"/>
+
+        <!--Row 6-->
+        <TextBlock Grid.Row="6" Grid.Column="1" Margin="0,5" TextAlignment="Center" FontSize="17" Text="Correct Answer"/>
+        
+        <!--Row 7-->
+        <ComboBox Grid.Row="7" Grid.Column="1" Margin="0,5" MaxWidth="500" MaxHeight="25" 
+                  ItemsSource="{Binding Path=CorrectOptions, Mode=OneWay}" SelectedItem ="{Binding Path=Correct, Mode=OneWayToSource}">
+        </ComboBox>
+
+        <!--Answers Column-->
+
+        <!--Row 3-->
+        <TextBlock Grid.Row="3" Grid.Column="3" Margin="0,5" TextAlignment="Center" FontSize="17" Text="Answers"/>
+        
+        <!--Row 4-->
+        <TextBox Grid.Row="4" Grid.Column="3" MaxWidth="500" TextAlignment ="Justify" TextWrapping="Wrap" x:Name="AnswersText"/>
+
+        <!--Row 6-->
+        <TextBlock Grid.Row="6" Grid.Column="3" Margin="0,5" TextAlignment="Center" FontSize="17" Text="New Answer:"/>
+        <TextBox Grid.Row="7" Grid.Column="3"  Margin="0,5" MaxWidth="500" TextAlignment ="Justify" TextWrapping="Wrap" 
+                 x:Name="NewAnswer" cal:Message.Attach="[Event KeyDown] = [Action AddAnswerEnter($executionContext)]"/>
+        
+        <!--Row 7-->
+        <Button x:Name="AddAnswer" Grid.Row="8" Grid.Column="3" Margin="0,5" Width="100" Content="Add Answer"/>
+
+        <!--Row 10-->
+        <Image Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="1" Source="{Binding Path=ImageSource, Mode=OneWay}"></Image>
+        <Button x:Name="SelectImage" Grid.Row="10" Grid.Column="3" Height="20" Width="100" Content="Select Image"/>
+
+        <!--Topics Column-->
+
+        <!--Row 3-->
+        <TextBlock Grid.Row="3" Grid.Column="5" Margin="0,5" TextAlignment="Center" FontSize="17" Text="Selected Topics"/>
+
+        <!--Row 4-->
+        <TextBox x:Name="TopicsText" Grid.Row="4" Grid.Column="5" MaxWidth="500" TextAlignment ="Justify" TextWrapping="Wrap"/>
+
+        <!--Row 5-->
+        <Button x:Name="ClearTopics" Grid.Row="5" Grid.Column="5" Content="Clear Topics"/>
+
+        <!--Row 6-->
+        <TextBlock Grid.Row="6" Grid.Column="5" Margin="0,5" TextAlignment="Center" FontSize="17" Text="Select Topic"/>
+       
+        <!--Row 7-->
+        <ComboBox Grid.Row="7" Grid.Column="5" Margin="0,5" MaxWidth="500" MaxHeight="25" 
+                  ItemsSource="{Binding Path=Topics, Mode=OneWay}" SelectedItem ="{Binding Path=SelectedTopic, Mode=TwoWay}" DisplayMemberPath="Name">
+        </ComboBox>
+
+        <!--Row 8-->
+        <TextBox x:Name="NewTopic" Grid.Row="8" Grid.Column="5" MaxWidth="500" TextAlignment ="Justify" TextWrapping="Wrap" Text="New Topic"/>
+
+        <!--Row 9-->
+        <Button x:Name="AddTopic" Grid.Row="9" Grid.Column="5" Height="20" Width="100" Content="AddTopic"/>
+
+
+        <!--Row 11-->
+        <Button x:Name="Submit" Grid.Row="12" Margin="0,5" Grid.Column="1" Grid.ColumnSpan="5" Width="100" Content="Submit"/>
+
+    </Grid>
+    </ScrollViewer>
+</UserControl>

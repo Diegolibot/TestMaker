@@ -1,0 +1,20 @@
+﻿TestMaker
+
+
+winexe
+C#
+.cs
+C:\Users\diego\Desktop\Test Maker\TestMaker\FirstApp\obj\Release\
+TestMaker
+none
+false
+TRACE
+C:\Users\diego\Desktop\Test Maker\TestMaker\FirstApp\App.xaml
+71815747813
+1-1077075238
+26159110548
+137697842770
+Views\CreateTestView.xaml;Views\EditQuestionsView.xaml;Views\FinishTestView.xaml;Views\MenuView.xaml;Views\NewQuestionView.xaml;Views\ShellView.xaml;Views\TestView.xaml;
+
+True
+

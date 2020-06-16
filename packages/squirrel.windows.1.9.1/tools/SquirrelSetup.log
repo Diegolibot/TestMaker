@@ -1,0 +1,33 @@
+﻿2020-06-15 18:41:47> Program: Starting Squirrel Updater: --releasify TestMaker.1.0.0.nupkg
+2020-06-15 18:41:47> Program: Bootstrapper EXE found at:C:\Users\diego\Desktop\Test Maker\FirstApp\packages\squirrel.windows.1.9.1\tools\Setup.exe
+2020-06-15 18:41:47> Program: Creating release package: C:\Users\diego\Desktop\Test Maker\FirstApp\Releases\TestMaker.1.0.0.nupkg
+2020-06-15 18:41:47> ReleasePackage: Creating release package: C:\Users\diego\Desktop\Test Maker\FirstApp\Releases\TestMaker.1.0.0.nupkg => C:\Users\diego\Desktop\Test Maker\FirstApp\Releases\TestMaker-1.0.0-full.nupkg
+2020-06-15 18:41:48> ReleasePackage: Extracting dependent packages: []
+2020-06-15 18:41:48> ReleasePackage: Removing unnecessary data
+2020-06-15 18:41:48> ReleasePackage: No release notes found in C:\Users\diego\AppData\Local\SquirrelTemp\tempp\TestMaker.nuspec
+2020-06-15 18:41:50> Program: Building embedded zip file for Setup.exe
+2020-06-15 18:47:16> Program: Starting Squirrel Updater: --releasify TestMaker.1.0.0.nupkg
+2020-06-15 18:47:16> Program: Bootstrapper EXE found at:C:\Users\diego\Desktop\Test Maker\FirstApp\packages\squirrel.windows.1.9.1\tools\Setup.exe
+2020-06-15 18:47:16> Program: Creating release package: C:\Users\diego\Desktop\Test Maker\FirstApp\Releases\TestMaker.1.0.0.nupkg
+2020-06-15 18:47:16> ReleasePackage: Creating release package: C:\Users\diego\Desktop\Test Maker\FirstApp\Releases\TestMaker.1.0.0.nupkg => C:\Users\diego\Desktop\Test Maker\FirstApp\Releases\TestMaker-1.0.0-full.nupkg
+2020-06-15 18:47:17> ReleasePackage: Extracting dependent packages: []
+2020-06-15 18:47:17> ReleasePackage: Removing unnecessary data
+2020-06-15 18:47:17> ReleasePackage: No release notes found in C:\Users\diego\AppData\Local\SquirrelTemp\tempp\TestMaker.nuspec
+2020-06-15 18:47:19> Program: Building embedded zip file for Setup.exe
+2020-06-15 19:07:59> Program: Starting Squirrel Updater: --realeasify TestMaker.1.0.0.nupkg
+2020-06-15 19:08:20> Program: Starting Squirrel Updater: --releasify TestMaker.1.0.0.nupkg
+2020-06-15 19:08:20> Program: Bootstrapper EXE found at:C:\Users\diego\Desktop\Test Maker\FirstApp\packages\squirrel.windows.1.9.1\tools\Setup.exe
+2020-06-15 19:08:21> Program: Creating release package: C:\Users\diego\Desktop\Test Maker\FirstApp\Releases\TestMaker.1.0.0.nupkg
+2020-06-15 19:08:21> ReleasePackage: Creating release package: C:\Users\diego\Desktop\Test Maker\FirstApp\Releases\TestMaker.1.0.0.nupkg => C:\Users\diego\Desktop\Test Maker\FirstApp\Releases\TestMaker-1.0.0-full.nupkg
+2020-06-15 19:08:22> ReleasePackage: Extracting dependent packages: []
+2020-06-15 19:08:22> ReleasePackage: Removing unnecessary data
+2020-06-15 19:08:22> ReleasePackage: No release notes found in C:\Users\diego\AppData\Local\SquirrelTemp\tempp\TestMaker.nuspec
+2020-06-15 19:08:24> Program: Building embedded zip file for Setup.exe
+2020-06-15 20:51:49> Program: Starting Squirrel Updater: --releasify TestMaker.1.0.0.nupkg
+2020-06-15 20:51:49> Program: Bootstrapper EXE found at:C:\Users\diego\Desktop\Test Maker\TestMaker\packages\squirrel.windows.1.9.1\tools\Setup.exe
+2020-06-15 20:51:49> Program: Creating release package: C:\Users\diego\Desktop\Test Maker\TestMaker\Releases\TestMaker.1.0.0.nupkg
+2020-06-15 20:51:49> ReleasePackage: Creating release package: C:\Users\diego\Desktop\Test Maker\TestMaker\Releases\TestMaker.1.0.0.nupkg => C:\Users\diego\Desktop\Test Maker\TestMaker\Releases\TestMaker-1.0.0-full.nupkg
+2020-06-15 20:51:52> ReleasePackage: Extracting dependent packages: []
+2020-06-15 20:51:52> ReleasePackage: Removing unnecessary data
+2020-06-15 20:51:52> ReleasePackage: No release notes found in C:\Users\diego\AppData\Local\SquirrelTemp\tempp\TestMaker.nuspec
+2020-06-15 20:51:54> Program: Building embedded zip file for Setup.exe
