@@ -17,3 +17,8 @@ To download the app, you just need the TestMaker_Setup.exe file located on the R
 
 ## Example Question Bank
 There's an example question bank to test the app's capabilities. It is a math exam and it's currently just on spanish.
+
+## Documentation
+It's not really formal, it just details the things I had to learn and a general functionality checkbox.
+
+https://www.notion.so/Test-Maker-835b98b65cbe4e4eb886a670ef2b59fa
